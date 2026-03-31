@@ -9,7 +9,7 @@ import Login from "./login/Login";
 import Navbar from "./Navbar/Navbar";
 import Register from "./Register/Register";
 
-import ProductPage from "./Productpage1/Productpage";
+import ProductPage from "./Productpage1/productpage";
 import Productpage1 from "./Productpage1/productpage1";
 import Productpage2 from "./Productpage1/productpage2";
 import Productpage3 from "./Productpage1/productpage3";
