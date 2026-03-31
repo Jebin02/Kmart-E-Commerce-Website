@@ -1,0 +1,979 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.navbar-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  background: black;   /* 👈 navbar black */
+  color: white;        /* 👈 text white */
+}
+
+/* 🔹 Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  background: #f5f5f5;
+  font-size: 14px;
+   background: black;   /* 👈 navbar black */
+  color: white;        /* 👈 text white */
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-right {
+  display: flex;
+  gap: 20px;
+}
+
+/* 🔹 Main Navbar */
+.main-navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  gap: 40px;
+}
+
+/* Logo */
+.logo h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ff4d4d;
+}
+
+/* 🔥 Menu (Brands + Categories same line) */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.brands,
+.categories {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.brands span,
+.categories span {
+  transition: 0.3s;
+}
+
+.brands span:hover,
+.categories span:hover {
+  color: #ff4d4d;
+}
+
+/* 🔽 Dropdown */
+.dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #fff;
+  width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.dropdown p {
+  padding: 10px;
+  margin: 0;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown p:hover {
+  background: #f2f2f2;
+}
+
+/* 🔍 Search Bar */
+.search-bar {
+  flex: 1;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* 🔹 Icons */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.icons svg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons svg:hover {
+  color: #ff4d4d;
+}
+
+/* Profile dropdown fix */
+.profile {
+  position: relative;
+}
+body {
+  padding-top: 100px;  /* adjust based on navbar height */
+}
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal-box {
+  background: #fff;
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header span {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Content */
+.modal-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* Cards */
+.role-card {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.role-card:hover {
+  transform: scale(1.05);
+}
+
+.role-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Role card improvement */
+.role-card {
+  width: 160px;
+  height: 190px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Button below image */
+.role-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.role-btn:hover {
+  background: #333;
+}
+.modal-header {
+  position: relative;
+  text-align: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔥 Overlay (dark background) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 📦 Modal box */
+.modal-box {
+  background: #fff;
+  width: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  animation: popup 0.3s ease;
+}
+
+/* ✨ Smooth animation */
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 🔝 Header */
+.modal-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* ❌ Close button */
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 📊 Content layout */
+.modal-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+/* 👉 Center 3rd card */
+.role-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* 🧱 Card */
+.role-card {
+  width: 180px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🖼 Image */
+.role-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  padding: 5px;
+}
+
+/* 🔘 Button */
+.role-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.role-btn:hover {
+  background: #333;
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee; /* Subtle bottom border */
+  padding: 20px 25px;
+  background-color: #f8f9fa; /* Light background for header */
+}
+
+.modal-title {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.5rem;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.register-btn {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff;
+  color: #000;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  animation: popup 0.3s ease;
+  height: 250px;
+}
+
+.modal-title {
+  margin-bottom: 10px;
+}
+
+.modal-text {
+  color: #555;
+  font-size: 14px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-btn {
+  background: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+.register-btn {
+  background: gray;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu item */
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 35px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+}
+
+.dropdown button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background: #333;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+  }
+}
+/* SEARCH BAR FIX */
+.search-bar {
+  flex: 1;              /* 👉 takes available space */
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 2000px;     /* 👉 increase this for bigger */
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-bar {
+  width: 800px;   
+}
+
+.wishlist-icon-nav {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wishlist-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Cart icon */
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Cart count badge */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.logout-icon {
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 15px;
+  color: white;
+}
+
+.logout-icon:hover {
+  color: red;
+}
+
+/* Navbar Base */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Search */
+.search-bar input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Hamburger hidden in desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ✅ MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111;
+    padding: 10px;
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding-left: 0px;
+    
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.profile-btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-btn:hover {
+  background: black;
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* ✅ prevents breaking */
+}
+
+/* LEFT SIDE */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* SEARCH FIX */
+.search-bar input {
+  width: 250px; /* ❗ don't make too big */
+}
+
+/* PROFILE BUTTON FIX */
+.profile-btn {
+  white-space: nowrap; /* ✅ prevents wrapping */
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* IMPORTANT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.orders-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.orders-btn:hover {
+  color: #ff9900;
+}
+
+/* Container */
+.navbar-container {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background: #111;
+  color: white;
+  font-size: 14px;
+}
+
+.top-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Main Navbar */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #232f3e;
+  color: white;
+  position: relative;
+}
+
+/* Logo */
+.logo h2 {
+  cursor: pointer;
+}
+
+.logo span {
+  color: orange;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Nav Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 30px;
+  background: black ;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.dropdown button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* Search */
+.search-bar input {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+/* Counts */
+.cart-count,
+.wishlist-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 768px) {
+
+  /* Top bar stack */
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide nav initially */
+  .nav-right {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    display: none;
+  }
+
+  /* When open */
+  .nav-right.active {
+    display: flex;
+  }
+
+  /* Stack menu */
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Search full width */
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  /* Icons in row */
+  .icons {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+}

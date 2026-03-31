@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+}
+
+/* Box */
+.login-box {
+  display: flex;
+  width: 750px;
+  height: 450px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Left */
+.login-left {
+  flex: 1;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left h2 {
+  font-size: 32px;
+}
+
+/* Right */
+.login-right {
+  flex: 1;
+  padding: 40px;
+}
+
+.login-right h3 {
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-right input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Password */
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* OR */
+.or {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Social */
+.social-login button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.google {
+  background: #16a054;
+  color: white;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Register */
+.register-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-text span {
+  color: blue;
+  cursor: pointer;
+}
